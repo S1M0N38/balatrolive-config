@@ -1,0 +1,70 @@
+################################################################################
+# EXECUTION
+################################################################################
+parallel: 1
+
+################################################################################
+# GAME PARAMETERS
+# Each parameter accepts a list. The cartesian product of all lists generates
+# the task queue (e.g., 2 seeds × 2 decks = 4 runs).
+################################################################################
+#
+seed:
+  - AAAAAAA
+  - BBBBBBB
+  - CCCCCCC
+  - DDDDDDD
+  - EEEEEEE
+  - FFFFFFF
+  - GGGGGGG
+  - HHHHHHH
+  - IIIIIII
+  - JJJJJJJ
+  - KKKKKKK
+  - LLLLLLL
+  - MMMMMMM
+  - NNNNNNN
+  - OOOOOOO
+  - PPPPPPP
+  - QQQQQQQ
+  - RRRRRRR
+  - SSSSSSS
+  - TTTTTTT
+  - UUUUUUU
+  - VVVVVVV
+  - WWWWWWW
+  - XXXXXXX
+  - YYYYYYY
+  - ZZZZZZZ
+
+deck:
+  - RED
+
+stake:
+  - WHITE
+
+################################################################################
+# STRATEGY
+################################################################################
+
+strategy:
+  - default
+
+################################################################################
+# MODEL
+################################################################################
+
+model:
+  - openai/gpt-oss-120b
+  - google/gemini-3-flash-preview
+  - openai/gpt-5.2
+  - x-ai/grok-4.1-fast
+
+model_config:
+  extra_body:
+    usage:
+      include: true
+    reasoning:
+      effort: low
+    provider:
+      sort: throughput
