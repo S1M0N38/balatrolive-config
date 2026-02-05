@@ -11,6 +11,20 @@ parallel: 1
 #
 seed:
   - AAAAAAA
+  - AAAAAAA
+  - AAAAAAA
+  - BBBBBBB
+  - BBBBBBB
+  - BBBBBBB
+  - CCCCCCC
+  - CCCCCCC
+  - CCCCCCC
+  - DDDDDDD
+  - DDDDDDD
+  - DDDDDDD
+  - EEEEEEE
+  - EEEEEEE
+  - EEEEEEE
 
 deck:
   - RED
@@ -31,6 +45,12 @@ strategy:
 
 model:
   - anthropic/claude-opus-4.6
+  - openai/gpt-oss-120b
+  - google/gemini-3-flash-preview
+  - x-ai/grok-4.1-fast
+  - openai/gpt-oss-120b
+  - google/gemini-3-flash-preview
+  - x-ai/grok-4.1-fast
 
 model_config:
   extra_body:
